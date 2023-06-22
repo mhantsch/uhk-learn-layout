@@ -3,7 +3,7 @@
 #
 
 import argparse
-from inputimeout import inputimeout
+#from inputimeout import inputimeout
 #import json
 #from functools import reduce, partial
 #import copy
@@ -13,14 +13,14 @@ import sys
 #from datetime import datetime
 #from enum import Enum, auto	
 
-def timedinput():
-	try:
-		s= inputimeout(timeout= 5)
-	except Exception:
-		return None
-	if args.debug:
-		print("read: '"+s+"'")
-	return s
+# def timedinput():
+# 	try:
+# 		s= inputimeout(timeout= 5)
+# 	except Exception:
+# 		return None
+# 	if args.debug:
+# 		print("read: '"+s+"'")
+# 	return s
 
 class Keymap:
 	def __init__(self):
