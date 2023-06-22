@@ -48,6 +48,8 @@ def showkeyrow(row, base, shift, altgr, ids):
 	if row>1 and row<4:
 		print(' '*multiplier, end='')
 	for i in ids:
+		if i not in base or i not in shift:
+			continue
 		if altgr==None:
 			if args.compact:
 				print(f" [ {base[i]:1.1}{shift[i]:1.1} ] ", end='')
