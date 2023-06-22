@@ -40,7 +40,7 @@ Now paste the generated text into a macro command, and bind that macro to a key 
 
 To learn your host keymap, run the tool and then type your key (`Fn-=`). The macro will produce quite a bit of output,
 and the tool will build an internal representation of the UHK keys and what characters they generate on the host.
-The result will be displayed as a keymap, and if the keymap is known (i.e. it's _canonical_ representation has been
+The result will be displayed as a keymap, and if the keymap is known (i.e. its _canonical_ representation has been
 added to the tool), it will also show a _canonical keymap name_ (e.g. "UK-International").
 
 ```
