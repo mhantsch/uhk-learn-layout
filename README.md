@@ -52,3 +52,7 @@ R2:           [ qQä ]  [ wWå ]  [ fFã ]  [ pPø ]  [ gG˛ ]  [ jJđ ]  [ lLł
 R3:           [ aAá ]  [ rR` ]  [ sSß ]  [ tT´ ]  [ dD¨ ]  [ hHˇ ]  [ nNñ ]  [ eEé ]  [ iIí ]  [ oOó ]  [ '"õ ]
 R4:  [ -_– ]  [ zZæ ]  [ xX^ ]  [ cCç ]  [ vVœ ]  [ bB˘ ]  [ kK˚ ]  [ mM¯ ]  [ ,<¸ ]  [ .>˙ ]  [ /?¿ ]
 ```
+
+If you want to add new known keymaps, you can display their _canonical_ representation using the `--print-canonical` option, then copy/paste it
+as a new entry into the `canonicalstrings` dictionary in the python code.
+
