@@ -100,10 +100,13 @@ canonicalstrings= {
 	"DE-International": '''^° /1! /2"²/3§³/4$ /5% /6& /7/{/8([/9)]/0=}/ß?\/´` /qQ@/wW /eE€/rR /tT /zZ /uU /iI /oO /pP /üÜ /+*~/#' /aA /sS /dD /fF /gG /hH /jJ /kK /lL /öÖ /äÄ /<>|/yY /xX /cC /vV /bB /nN /mMµ/,; /.: /-_ ''',
 	"DE": '''^°/1!/2"/3§/4$/5%/6&/7//8(/9)/0=/ß?/´`/qQ/wW/eE/rR/tT/zZ/uU/iI/oO/pP/üÜ/+*/#'/aA/sS/dD/fF/gG/hH/jJ/kK/lL/öÖ/äÄ/<>/yY/xX/cC/vV/bB/nN/mM/,;/.:/-_''',
 	"US": '''`~/1!/2@/3#/4$/5%/6^/7&/8*/9(/0)/-_/=+/qQ/wW/eE/rR/tT/yY/uU/iI/oO/pP/[{/]}/\|/aA/sS/dD/fF/gG/hH/jJ/kK/lL/;:/'"/\|/zZ/xX/cC/vV/bB/nN/mM/,</.>//?''',
+	"US-noAltGr": '''`~`/1!1/2@2/3#3/4$4/5%5/6^6/7&7/8*8/9(9/0)0/-_-/=+=/qQq/wWw/eEe/rRr/tTt/yYy/uUu/iIi/oOo/pPp/[{[/]}]/\|\/aAa/sSs/dDd/fFf/gGg/hHh/jJj/kKk/lLl/;:;/'"'/\|\/zZz/xXx/cCc/vVv/bBb/nNn/mMm/,<,/.>.//?/''',
 	"US-International": '''`~ /1!¡/2@²/3#³/4$¤/5%€/6^¼/7&½/8*¾/9(‘/0)’/-_¥/=+×/qQä/wWå/eEé/rR®/tTþ/yYü/uUú/iIí/oOó/pPö/[{«/]}»/\|¬/aAá/sSß/dDð/fF /gG /hH /jJ /kK /lLø/;:¶/'"´/\| /zZæ/xX /cC©/vV /bB /nNñ/mMµ/,<ç/.> //?¿''',
 	"US-Colemak-International": '''`~~/1!¡/2@º/3#ª/4$¢/5%€/6^ħ/7&ð/8*þ/9(‘/0)’/-_–/=+×/qQä/wWå/fFã/pPø/gG˛/jJđ/lLł/uUú/yYü/;:ö/[{«/]}»/\|*/aAá/rR`/sSß/tT´/dD¨/hHˇ/nNñ/eEé/iIí/oOó/'"õ/-_–/zZæ/xX^/cCç/vVœ/bB˘/kK˚/mM¯/,<¸/.>˙//?¿''',
 	"US-Colemak": '''`~/1!/2@/3#/4$/5%/6^/7&/8*/9(/0)/-_/=+/qQ/wW/fF/pP/gG/jJ/lL/uU/yY/;:/[{/]}/\|/aA/rR/sS/tT/dD/hH/nN/eE/iI/oO/'"/-_/zZ/xX/cC/vV/bB/kK/mM/,</.>//?''',
 	"US-Dvorak": '''`~/1!/2@/3#/4$/5%/6^/7&/8*/9(/0)/[{/]}/'"/,</.>/pP/yY/fF/gG/cC/rR/lL//?/=+/\|/aA/oO/eE/uU/iI/dD/hH/tT/nN/sS/-_/\|/;:/qQ/jJ/kK/xX/bB/mM/wW/vV/zZ''',
+	"US-Dvorak-noAltGr":
+	'''`~`/1!1/2@2/3#3/4$4/5%5/6^6/7&7/8*8/9(9/0)0/[{[/]}]/'"'/,<,/.>./pPp/yYy/fFf/gGg/cCc/rRr/lLl//?//=+=/\|\/aAa/oOo/eEe/uUu/iIi/dDd/hHh/tTt/nNn/sSs/-_-/\|\/;:;/qQq/jJj/kKk/xXx/bBb/mMm/wWw/vVv/zZz''',
 	"UK": '''`¬/1!/2"/3£/4$/5%/6^/7&/8*/9(/0)/-_/=+/qQ/wW/eE/rR/tT/yY/uU/iI/oO/pP/[{/]}/#~/aA/sS/dD/fF/gG/hH/jJ/kK/lL/;:/'@/\|/zZ/xX/cC/vV/bB/nN/mM/,</.>//?''',
 	"UK-International": '''`¬¦/1! /2" /3£ /4$€/5% /6^ /7& /8* /9( /0) /-_ /=+ /qQ /wW /eEé/rR /tT /yY /uUú/iIí/oOó/pP /[{ /]} /#~\/aAá/sS /dD /fF /gG /hH /jJ /kK /lL /;: /'@ /\| /zZ /xX /cC /vV /bB /nN /mM /,< /.> //? '''
 }
