@@ -105,8 +105,7 @@ canonicalstrings= {
 	"US-Colemak-International": '''`~~/1!¡/2@º/3#ª/4$¢/5%€/6^ħ/7&ð/8*þ/9(‘/0)’/-_–/=+×/qQä/wWå/fFã/pPø/gG˛/jJđ/lLł/uUú/yYü/;:ö/[{«/]}»/\|*/aAá/rR`/sSß/tT´/dD¨/hHˇ/nNñ/eEé/iIí/oOó/'"õ/-_–/zZæ/xX^/cCç/vVœ/bB˘/kK˚/mM¯/,<¸/.>˙//?¿''',
 	"US-Colemak": '''`~/1!/2@/3#/4$/5%/6^/7&/8*/9(/0)/-_/=+/qQ/wW/fF/pP/gG/jJ/lL/uU/yY/;:/[{/]}/\|/aA/rR/sS/tT/dD/hH/nN/eE/iI/oO/'"/-_/zZ/xX/cC/vV/bB/kK/mM/,</.>//?''',
 	"US-Dvorak": '''`~/1!/2@/3#/4$/5%/6^/7&/8*/9(/0)/[{/]}/'"/,</.>/pP/yY/fF/gG/cC/rR/lL//?/=+/\|/aA/oO/eE/uU/iI/dD/hH/tT/nN/sS/-_/\|/;:/qQ/jJ/kK/xX/bB/mM/wW/vV/zZ''',
-	"US-Dvorak-noAltGr":
-	'''`~`/1!1/2@2/3#3/4$4/5%5/6^6/7&7/8*8/9(9/0)0/[{[/]}]/'"'/,<,/.>./pPp/yYy/fFf/gGg/cCc/rRr/lLl//?//=+=/\|\/aAa/oOo/eEe/uUu/iIi/dDd/hHh/tTt/nNn/sSs/-_-/\|\/;:;/qQq/jJj/kKk/xXx/bBb/mMm/wWw/vVv/zZz''',
+	"US-Dvorak-noAltGr": '''`~`/1!1/2@2/3#3/4$4/5%5/6^6/7&7/8*8/9(9/0)0/[{[/]}]/'"'/,<,/.>./pPp/yYy/fFf/gGg/cCc/rRr/lLl//?//=+=/\|\/aAa/oOo/eEe/uUu/iIi/dDd/hHh/tTt/nNn/sSs/-_-/\|\/;:;/qQq/jJj/kKk/xXx/bBb/mMm/wWw/vVv/zZz''',
 	"UK": '''`¬/1!/2"/3£/4$/5%/6^/7&/8*/9(/0)/-_/=+/qQ/wW/eE/rR/tT/yY/uU/iI/oO/pP/[{/]}/#~/aA/sS/dD/fF/gG/hH/jJ/kK/lL/;:/'@/\|/zZ/xX/cC/vV/bB/nN/mM/,</.>//?''',
 	"UK-International": '''`¬¦/1! /2" /3£ /4$€/5% /6^ /7& /8* /9( /0) /-_ /=+ /qQ /wW /eEé/rR /tT /yY /uUú/iIí/oOó/pP /[{ /]} /#~\/aAá/sS /dD /fF /gG /hH /jJ /kK /lL /;: /'@ /\| /zZ /xX /cC /vV /bB /nN /mM /,< /.> //? '''
 }
