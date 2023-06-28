@@ -211,7 +211,7 @@ def spacedNumber(num):
 	if args.debug:
 		for c in str(num):
 			print("char: "+c)
-		
+
 	return ' '.join(map(lambda c: kpnum(int(c)), list(str(num))))
 
 def printMacro():
