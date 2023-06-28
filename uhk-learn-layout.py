@@ -107,7 +107,9 @@ canonicalstrings= {
 	"US-Dvorak": '''`~/1!/2@/3#/4$/5%/6^/7&/8*/9(/0)/[{/]}/'"/,</.>/pP/yY/fF/gG/cC/rR/lL//?/=+/\|/aA/oO/eE/uU/iI/dD/hH/tT/nN/sS/-_/\|/;:/qQ/jJ/kK/xX/bB/mM/wW/vV/zZ''',
 	"US-Dvorak-noAltGr": '''`~`/1!1/2@2/3#3/4$4/5%5/6^6/7&7/8*8/9(9/0)0/[{[/]}]/'"'/,<,/.>./pPp/yYy/fFf/gGg/cCc/rRr/lLl//?//=+=/\|\/aAa/oOo/eEe/uUu/iIi/dDd/hHh/tTt/nNn/sSs/-_-/\|\/;:;/qQq/jJj/kKk/xXx/bBb/mMm/wWw/vVv/zZz''',
 	"UK": '''`¬/1!/2"/3£/4$/5%/6^/7&/8*/9(/0)/-_/=+/qQ/wW/eE/rR/tT/yY/uU/iI/oO/pP/[{/]}/#~/aA/sS/dD/fF/gG/hH/jJ/kK/lL/;:/'@/\|/zZ/xX/cC/vV/bB/nN/mM/,</.>//?''',
-	"UK-International": '''`¬¦/1! /2" /3£ /4$€/5% /6^ /7& /8* /9( /0) /-_ /=+ /qQ /wW /eEé/rR /tT /yY /uUú/iIí/oOó/pP /[{ /]} /#~\/aAá/sS /dD /fF /gG /hH /jJ /kK /lL /;: /'@ /\| /zZ /xX /cC /vV /bB /nN /mM /,< /.> //? '''
+	"UK-International": '''`¬¦/1! /2" /3£ /4$€/5% /6^ /7& /8* /9( /0) /-_ /=+ /qQ /wW /eEé/rR /tT /yY /uUú/iIí/oOó/pP /[{ /]} /#~\/aAá/sS /dD /fF /gG /hH /jJ /kK /lL /;: /'@ /\| /zZ /xX /cC /vV /bB /nN /mM /,< /.> //? ''',
+	"FR": '''² /&1/é2/"3/'4/(5/-6/è7/_8/ç9/à0/)°/=+/aA/zZ/eE/rR/tT/yY/uU/iI/oO/pP/^¨/$£/*µ/qQ/sS/dD/fF/gG/hH/jJ/kK/lL/mM/ù%/<>/wW/xX/cC/vV/bB/nN/,?/;./://!§''', 
+	"FR-International": '''²  /&1 /é2~/"3#/'4{/(5[/-6|/è7`/_8\/ç9^/à0@/)°]/=+}/aA /zZ /eE€/rR /tT /yY /uU /iI /oO /pP /^¨ /$£¤/*µ /qQ /sS /dD /fF /gG /hH /jJ /kK /lL /mM /ù% /<> /wW /xX /cC /vV /bB /nN /,? /;. /:/ /!§ '''
 }
 
 def canonicaltomapname(canstring):
@@ -189,12 +191,28 @@ def main():
 	if args.showmap:
 		generateoutput(keymap)
 
+kpnum_array= [
+	'np0',
+	'np1',
+	'np2',
+	'np3',
+	'np4',
+	'np5',
+	'np6',
+	'np7',
+	'np8',
+	'np9',
+]
+
+def kpnum(num):
+	return kpnum_array[num]
+
 def spacedNumber(num):
 	if args.debug:
 		for c in str(num):
 			print("char: "+c)
 		
-	return ' '.join(list(str(num)))
+	return ' '.join(map(lambda c: kpnum(int(c)), list(str(num))))
 
 def printMacro():
 	if args.macrodelay:
