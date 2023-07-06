@@ -39,11 +39,14 @@ class Keymap:
 	def getlayer(self, layer):
 		return self.keymap[layer] if layer in self.keymap else None
 
-def showkeyrow(row, base, shift, altgr, ids):
+def showkeyrow(row, base, shift, altgr, altgrshift, ids):
 	if altgr==None:
 		multiplier= 9 if not args.compact else 8
 	else:
-		multiplier= 11 if not args.compact else 9
+		if altgrshift==None or not args.fourlevels:
+			multiplier= 11 if not args.compact else 9
+		else:
+			multiplier= 13 if not args.compact else 10
 	print(f"R{row}: ", end='')
 	if row>1 and row<4:
 		print(' '*multiplier, end='')
@@ -56,21 +59,28 @@ def showkeyrow(row, base, shift, altgr, ids):
 			else:
 				print(f" [ {base[i]:1.1}/{shift[i]:1.1} ] ", end='')
 		else:
-			if args.compact:
-				print(f" [ {base[i]:1.1}{shift[i]:1.1}{altgr[i]:1.1} ] ", end='')
+			if altgrshift==None or not args.fourlevels:
+				if args.compact:
+					print(f" [ {base[i]:1.1}{shift[i]:1.1}{altgr[i]:1.1} ] ", end='')
+				else:
+					print(f" [ {base[i]:1.1}/{shift[i]:1.1}/{altgr[i]:1.1} ] ", end='')
 			else:
-				print(f" [ {base[i]:1.1}/{shift[i]:1.1}/{altgr[i]:1.1} ] ", end='')
+				if args.compact:
+					print(f" [ {base[i]:1.1}{shift[i]:1.1}{altgr[i]:1.1}{altgrshift[i]:1.1} ] ", end='')
+				else:
+					print(f" [ {base[i]:1.1}/{shift[i]:1.1}/{altgr[i]:1.1}/{altgrshift[i]:1.1} ] ", end='')
 	print("")
 
-def generateoutput(keymap):
+def showkeymap(keymap):
 	base= keymap.getlayer('-')
 	shift= keymap.getlayer('+')
 	altgr= keymap.getlayer('*')
+	altgrshift= keymap.getlayer('/')
 
-	showkeyrow(1, base, shift, altgr, ( 64, 65, 66, 67, 68, 69, 70, 0, 1, 2, 3, 4, 5 ))
-	showkeyrow(2, base, shift, altgr, ( 72, 73, 74, 75, 77, 14, 7, 8, 9, 10, 11, 12, 13 ))
-	showkeyrow(3, base, shift, altgr, ( 79, 80, 81, 82, 84, 21, 15, 16, 17, 18, 19 ))
-	showkeyrow(4, base, shift, altgr, ( 86, 87, 88, 89, 90, 91, 22, 23, 24, 25, 26 ))
+	showkeyrow(1, base, shift, altgr, altgrshift, ( 64, 65, 66, 67, 68, 69, 70, 0, 1, 2, 3, 4, 5 ))
+	showkeyrow(2, base, shift, altgr, altgrshift, ( 72, 73, 74, 75, 77, 14, 7, 8, 9, 10, 11, 12, 13 ))
+	showkeyrow(3, base, shift, altgr, altgrshift, ( 79, 80, 81, 82, 84, 21, 15, 16, 17, 18, 19 ))
+	showkeyrow(4, base, shift, altgr, altgrshift, ( 86, 87, 88, 89, 90, 91, 22, 23, 24, 25, 26 ))
 
 def generatecanonicalmapid(keymap):
 	base= keymap.getlayer('-')
@@ -119,7 +129,7 @@ def canonicaltomapname(canstring):
 	return None
 
 def processline(line, keymap):
-	res= re.match(r"^\-(?P<layer>[\+\-\*])(?P<keyid>[0-9]+)\-(?P<keychar>[^ ]*)(?P<spaces>.*)$", line)
+	res= re.match(r"^\-(?P<layer>[\+\-\*\/])(?P<keyid>[0-9]+)\-(?P<keychar>[^ ]*)(?P<spaces>.*)$", line)
 	if res:
 		keymap.add(res.group('keyid'), res.group('keychar'), res.group('layer'))
 		return True
@@ -147,6 +157,8 @@ def main():
 						help='show the keyboard layout')
 	parser.add_argument('--compact', dest='compact', action='store_true', default=False, 
 						help='show a compact version of the keyboard layout')
+	parser.add_argument('--fourlevels', dest='fourlevels', action='store_true', default=False, 
+						help='show up to four levels for each key (base, shift, altgr, shift-altgr)')
 	parser.add_argument('--input', dest='inputfile', action='store', default=None, 
 						help='read input from this file')
 
@@ -189,7 +201,7 @@ def main():
 			print("Canonical keymap name: "+name)
 
 	if args.showmap:
-		generateoutput(keymap)
+		showkeymap(keymap)
 
 kpnum_array= [
 	'np0',
