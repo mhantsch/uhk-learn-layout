@@ -13,15 +13,16 @@ determine the host layout from the output of the "learn_layout" macro run on a U
 options:
   -h, --help         show this help message and exit
   --debug            show debugging information for developers
-  --generate-macro   generate learn_hostmap macro for UHK Agent. Paste the generated macro code into a
-                     macro command, and bind it to a key. Execute the macro (by tapping the key), and feed
-                     the output into this script to learn the host keymap.
+  --generate-macro   generate learn_hostmap macro for UHK Agent. Paste the generated macro code into a macro command,
+                     and bind it to a key. Execute the macro (by tapping the key), and feed the output into this
+                     script to learn the host keymap.
   --use-altgr        use AltGr combinations in macro (in addition to standard keypress and shift-keypress)
   --macrodelay       insert delays into the macro (so it runs a bit slower)
   --print-canonical  print the canoncial string(s) for this keymap
   --canonical        show the canonical name for this keymap
   --showmap          show the keyboard layout
   --compact          show a compact version of the keyboard layout
+  --fourlevels       show up to four levels for each key (base, shift, altgr, shift-altgr)
   --input INPUTFILE  read input from this file
 ```
 
@@ -29,8 +30,8 @@ options:
 
 First, generate a macro that you will need to copy/paste into Agent. 
 Use --generate-macro to create the macro command. The plain version will test all keys in unshifted
-and shifted state. You can also add the --use-altgr option, and the generated macro will test all keys
-in unshifted, shifted, AltGr, and AltGr+Shift state.
+and shifted state. You can also add the --use-altgr or --fourlevels options, and the generated macro 
+will test all keys in unshifted, shifted, AltGr, and AltGr+Shift state.
 
 ```
 C:\dev\uhk-learn-layout>python uhk-learn-layout.py --generate-macro --use-altgr > macro.txt
